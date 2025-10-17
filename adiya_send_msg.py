@@ -1,6 +1,6 @@
-# Team Kalos — Problem 3.1
-# Adiyas task: implement send_msg (and the shared dict it uses).
-#  will write tests separately.
+# Problem 3.1
+# Adiyas task: create send_msg (and the shared dict)
+#  write tests separately
 
 import random
 import time
@@ -23,7 +23,7 @@ def send_msg(msg: str, delay: int, units: str):
     Raises:
         Exception: for invalid 'delay' type or invalid 'units' values
     """
-    # 1) validate the input
+    # 1) validate input
     if not isinstance(delay, int):
         raise Exception("Delay must be an integer.")
     if units not in ("seconds", "minutes", "hours"):
@@ -36,22 +36,20 @@ def send_msg(msg: str, delay: int, units: str):
     elif units == "hours":
         delay_in_seconds = delay * 3600
 
-    # 3) generate random 6-digit ID
+    # 3) make random 6-digits id
     msg_id = random.randint(100000, 999999)
 
-    # 4) compute unlock time 
+    # 4) figure out unlock time 
     unlock_time = time.time() + delay_in_seconds
 
-    # 5) store in the global dictionary
+    # 5) store in global dictionary
     message_dict[msg_id] = {
         "message": msg,
         "unlock_time": unlock_time
     }
-
     # 6) print and return ID
     print(msg_id)
     return msg_id
-
 
 # ---- local quick test (run: python3 problem3_code.py) ----
 if __name__ == "__main__":
