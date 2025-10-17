@@ -53,5 +53,5 @@ def send_msg(msg: str, delay: int, units: str):
 
 # ---- local quick test (run: python3 problem3_code.py) ----
 if __name__ == "__main__":
-    test_id = send_msg("hello from kalos", 3, "seconds")
+    test_id = send_msg("hey hey from kalos", 3, "seconds")
     print("Stored:", test_id)
