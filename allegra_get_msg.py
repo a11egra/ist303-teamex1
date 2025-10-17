@@ -21,7 +21,7 @@ def get_msg(id:int):
             print(msg_info["msg"])
             return True
         else:
-            print ("cannot retrieve your message. The message may not exist or more time may need to pass.")
+            print("cannot retrieve your message. The message may not exist or more time may need to pass.")
             return False
 
     # if the id does not exist in the dictionary, kill the program
