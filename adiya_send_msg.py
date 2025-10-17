@@ -1,6 +1,4 @@
-# Kalos 3.1
 # Adiyas job: create send_msg (and the shared dict)
-# write tests separately
 
 import random
 import time
