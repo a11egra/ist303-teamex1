@@ -1,6 +1,6 @@
 # Problem 3.1
-# Adiyas task: create send_msg (and the shared dict)
-#  write tests separately
+# Adiyas job: create send_msg (and the shared dict)
+# write tests separately
 
 import random
 import time
