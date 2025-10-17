@@ -1,4 +1,4 @@
-# Problem 3.1
+# Kalos 3.1
 # Adiyas job: create send_msg (and the shared dict)
 # write tests separately
 
@@ -23,20 +23,20 @@ def send_msg(msg: str, delay: int, units: str):
     Raises:
         Exception: for invalid 'delay' type or invalid 'units' values
     """
-    # 1) validate input
+    # 1) validate
     if not isinstance(delay, int):
         raise Exception("Delay must be an integer.")
     if units not in ("seconds", "minutes", "hours"):
         raise Exception("Units must be 'seconds', 'minutes', or 'hours'.")
 
-    # 2) convert the delay into second
+    # 2) convert the delay into sec
     delay_in_seconds = delay
     if units == "minutes":
         delay_in_seconds = delay * 60
     elif units == "hours":
         delay_in_seconds = delay * 3600
 
-    # 3) make random 6-digits id
+    # 3) make random 6-digit id
     msg_id = random.randint(100000, 999999)
 
     # 4) figure out unlock time 
